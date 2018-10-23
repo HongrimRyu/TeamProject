@@ -1,0 +1,353 @@
+@CHARSET "UTF-8";
+*{
+	list-style: none;
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+	
+}
+/* 본문 */
+article {
+	position: relative;
+	height:830px;
+	
+}
+
+/* 사이드 */
+aside {
+	float: left;
+	min-width: 440px;
+	min-height:830px;
+	height:100%;
+	z-index: 10000;
+	overflow: hidden;
+	display: block;
+	position: relative;
+	padding-bottom:30px;
+}
+#planTitle{
+	width:100%;
+	height: 50px;
+	padding:0 20px;
+	font-size: 1.2em;
+}
+#title_show h1{
+	width:350px;
+	height: 50px;
+	margin:0;
+	float: left;
+	padding-top:10px;
+}
+#title_show img{
+	float: left;
+	padding-top:20px;
+}
+#title_modify{
+	display: none;
+}
+#in_title{
+	width: 370px; 
+	height: 30px; 
+	position: absolute;
+	background-color: #f2f2f2;
+	border:1px solid #e2e2e2;
+	margin-top:10px;
+}
+#m_btn{
+	   	position: absolute;
+	    right: 15px;
+	    padding-top: 20px;
+	    cursor: pointer;
+}
+#planLeft {
+	width: 220px;
+	height:830px;
+	display: block;
+	float: left;
+	background-color: #189BFF;
+	border-top: 1px solid #000000;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	z-index: 200;
+	overflow: hidden;
+	padding-bottom:50px;
+}
+
+.planLeftA {
+	max-height: 600px;
+	padding: 10px 10px;
+	display: inline-block;
+	overflow-y: auto;
+	-ms-overflow-style: none;
+	position: relative;
+}
+
+.planAddButton, .planSaveButton {
+	min-width: 120px;
+	padding: 5px 20px;
+	margin-left: 20%;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 1.1em;
+	line-height: 1.3em;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	background-color: black;
+	border: 1px solid black;
+	position: relative;
+}
+
+.planButton2 {
+	min-width: 120px;
+	padding: 5px 10px;
+	margin-left: 20%;
+	margin-top: 15px;
+	font-size: 0.8em;
+	line-height: 1.3em;
+	text-align: center;
+	font-weight: bold;
+	background-color: #e4e4e4;
+	border: 1px solid #d4d4d4;
+	position: relative;
+}
+
+.planButton2_1 {
+	min-width: 120px;
+	padding: 5px 10px;
+	margin-left: 20%;
+	margin-top: 5px;
+	font-size: 0.8em;
+	line-height: 1.3em;
+	text-align: center;
+	font-weight: bold;
+	background-color: #e4e4e4;
+	border: 1px solid #d4d4d4;
+	position: relative;
+}
+
+.planButton3 {
+	min-width: 120px;
+	padding: 5px 10px;
+	margin-top: 10px;
+	margin-left: 25%;
+	line-height: 1.3em;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	background-color: black;
+	border: 1px solid black;
+	position: relative;
+}
+
+.planAddButton:HOVER, .planSaveButton:hover {
+	background-color: #EF5350;
+	border: 1px solid red;
+	transition-delay: 0.01s;
+}
+.planButton2:hover, .planButton2_1:hover{
+	background-color: #f2f2f2;
+	border: 1px solid #e4e4e4;
+}
+.planButton3:hover {
+	background-color: #aae4ff;
+	border: 1px solid #92dcff;
+	color: black;
+}
+
+.Abox {
+	min-width: 185px;
+	padding: 7px 20px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	text-align: center;
+	line-height: 2em;
+	font-weight: bold;
+	font-size: 0.7em;
+	background-color: #fff;
+	border: 3px solid black;
+	display: inline-block;
+}
+
+.Abox > a > span {
+	font-size: 1.5em;
+	letter-spacing: 0.5em;
+}
+
+.Abox > img {
+	padding-top: 5px;
+}
+
+.planLeftB {
+	max-width: 220px;
+	min-height: 100px;
+	bottom: 20px;
+	margin: 0;
+	position: absolute;
+}
+
+/* Plan Right Box  */
+#planRight {
+	width: 220px;
+	height:830px;
+	float: left;
+	background-color: #f9f9f9;
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+	z-index: 130;
+	margin-right:10px;
+}
+.planRightTop{
+	 padding:15px; 
+	 height: 50px; 
+	 text-align:center;
+	 font-weight: bold;
+}
+.planRightA{
+	width:200px;
+	height: 630px;
+	max-height:80%;
+	margin:0 auto;
+	overflow: scroll;
+}
+.plan_listA{
+	width:200px;
+	height: 100px;
+	
+}
+
+.planRightB {
+	width: 200px;
+	min-height: 100px;
+	bottom: 25px;
+	margin: 0;
+	position: absolute;
+	padding-top:10px;
+}
+
+.planInput {
+	border: 1px solid #e4e4e4;
+	padding: 2px 10px;
+	width: 180px;
+	height: 30px;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+/*자세히 보기,장소추가*/
+#detail_form, #place_add{
+	width: 440px;
+	height: 825px;
+	position: absolute;
+	background-color: #fff;
+	border:1px solid #000;
+	visibility: hidden;
+}
+/* 본문지도부분 */
+section {
+	float: left;
+	display: block;
+	min-width: 100%;
+	min-height:830px;
+	background-color: #f9f9f9;
+	position: absolute;
+	z-index: 100;
+	overflow: hidden;
+}
+#sLayout {
+	float: left;
+	width: 100%;
+	min-height:830px;
+	padding-left: 440px;
+	background-color: #fff;
+}
+.mapLayout{
+	overflow: hidden;
+	
+}
+.mapIcon {
+	width:1200px;
+	height: 50px;
+	z-index: 10;
+}
+
+.mapIcon ul {
+	float:right;
+	min-width: 800px;
+}
+
+.mapIcon ul li {
+	min-width: 50px;
+	min-height:30px;
+	list-style: none;
+	float: left;
+	margin:0 20px;
+	padding-top:5px;
+	display:inline-block;
+	text-align: center;
+	font-size:0.8em;
+	font-weight:bold;
+	line-height: 2.2em;
+	
+}
+#googleMap {
+	float: left;
+	padding-left: 320px;
+	background-color: #d4d4d4;
+	width: 100%;
+	height:782px;
+	max-height:85vh;
+	display: block;
+	z-index:30;
+	border-top:1px solid black;
+}
+
+/* 우측박스  */
+.placeLayout{
+	width:370px !important;
+	height:782px;
+	border-left:1px solid #e4e4e4;
+	border-top:1px solid #000;
+	position:absolute;
+	z-index:7000;
+	right: 0px;
+	top: 0px;
+	margin-top:50px;
+	background-color:#f8f8f8;
+	padding:10px;
+	padding-left:10px;
+	float: right;
+	overflow: auto;
+}
+.RightBox{
+	widht:300px !important;
+	float: right;
+}
+.searchBox {
+	padding:5px 0;
+	line-height: 1.5em;
+}
+.searchBox input{
+	background-color:#f5f5f5;
+	border:1px solid #e4e4e4;
+	width:100%;
+	height:30px;
+}
+
+.placeBox{
+	margin-top:20px;
+	width:100%;
+	height:800px;
+	overflow: auto;
+}
+
+.icon{
+	display: inline-block;
+	vertical-align: middle;
+	color:#545454;
+	padding-top:90%;
+}
+
+.rightbar{
+	right:-330px;
+}

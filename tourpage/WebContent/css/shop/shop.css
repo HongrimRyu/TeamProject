@@ -1,0 +1,247 @@
+@CHARSET "UTF-8";
+
+article {
+	background-color: #00E676;
+}
+#shopLayout {
+	width: 100%;
+	height: 850px;
+	max-height:100vh; 
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 450px 80px 500x;
+	padding:0;
+}
+#shopAd {
+	background-image:url("../../img/shop/shop_img.jpg");
+	background-position:center;
+	background-size:cover;
+	border-bottom: 1px solid #e4e4e4;
+	grid-column: 1/16;
+	grid-row: 1/2;
+	text-align: center;
+	line-height: 2em;
+	font-size: 3em;
+	color: #e4e4e4;
+	height: 450px;
+	display: block;
+}
+
+#shopSearch {
+	background-color: #e9e9e9;
+	border-bottom: 1px solid #e4e4e4;
+	grid-column: 1/16;
+	grid-row: 2/3;
+	text-align: center;
+	letter-spacing: 0.2em;
+	padding:15px 0;
+}
+
+#shopSearch > span {
+	font-size:0.8em;
+	color: #242424;
+	margin-top : 20px;
+	padding:5px 0;
+}
+
+.shopInp {
+	background-color: #f9f9f9;
+	min-width: 500px;
+	min-height: 30px;
+	border: 1px solid #d2d2d2;
+	padding: 0 10px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.shopBtn {
+	background-color: #000;
+	border: 1px solid #000;
+	min-width: 50px;
+	min-height: 30px;
+	padding: 0 10px;
+	margin-bottom:10px;
+	color:#fff;
+}
+.shopBtn:hover{
+	background-color: #000;
+	color:#189BFF;
+}
+
+#shopList {
+	height:310px;
+	background-color: #f9f9f9;
+	grid-column: 1/16;
+	grid-row: 3/4;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: 60px repeat(3, 1fr);
+	margin: 0; padding:0;
+	overflow: auto;
+}
+
+#shopList div.A, #shopList div.B, #shopList div.C, #shopList div.D {
+	display: inline-block;
+	grid-row: 2/4;
+	position: relative;
+	width: 300px;
+}
+
+#shopList div.A {
+	grid-column: 2/3;
+}
+
+#shopList div.B {
+	grid-column: 3/4;
+}
+
+#shopList div.C {
+	grid-column: 4/5;
+}
+
+#shopList div.D {
+	grid-column: 5/6;
+}
+#shopBanner{
+	grid-column:2/6;
+	grid-row:4/5;
+	margin-top:20px;
+	background-color: #e4e4e4;
+	border-radius: 20px;
+	border: 1px solid #d2d2d2;
+	position: relative;
+	padding: 20px 20px;
+}
+
+
+
+/* searchResult */
+#searchList {
+	background-color: #f9f9f9;
+	grid-column: 1/16;
+	grid-row: 3/4;
+	display: grid;
+	grid-template-columns: repeat(auto-fill);
+	grid-template-rows: 60px repeat(1, 1fr) 60px;
+	grid-gap: 5px;
+	width:100%;
+	padding:10px 50px;
+}
+
+#searchCategory{
+	grid-column:1/2;
+	grid-row:1/2;
+	min-height:20px;
+	padding:0; margin:0 auto;
+	width:1200px;
+}
+#searchCategory ul{
+	float:right;
+	padding-top:18px;
+	padding-right:20px;
+}
+#searchCategory ul li{
+	float:left;
+	padding: 5px 15px;
+}
+
+#itemListLayout{
+	grid-column:1/2;
+	grid-row:2/3;
+	display: grid;
+	grid-template-rows: 20px repeat(5,1fr);
+	grid-gap:5px;
+	max-width: 1200px;
+	min-height: 960px;
+	overflow:auto;
+	margin:0 auto;
+}
+#itemListLayout > span{
+	margin-left:20px;
+	padding-top:10px;
+	font-size:0.8em;
+	font-weight: bold;
+	grid-column : 1/2;
+	grid-row:1/2;
+	display: inline-block;
+}
+
+#searchList #itemList{
+	max-width:100%;
+	padding: 10px;
+	list-style: none;
+	display: contents;
+	grid-column:1/5;
+}
+
+#itemList li{
+	min-width:1100px;
+	padding:1px 1px;
+	margin:8px 10px;
+	min-height:200px;
+	border:0.5px solid #e4e4e4;
+	display: grid;
+	grid-template-columns: 200px repeat(2,1fr) 150px;
+	background-color: #fff;
+}
+#itemimg{
+	grid-column : 1/2;
+	display: block;
+	width:210px;
+	height: 200px;
+	float: left;
+	border-right:1px solid #e4e4e4;
+}
+#itemtitle{
+	grid-column : 2/4;
+	display: block;
+	padding:20px;
+	display: flex;
+	justify-content : center;
+	align-self:center;
+}
+#itemprice{
+	display:block;
+	grid-column : 4/5;
+	display: flex;
+	background-color:#f5f5f5;
+	width: 100%;
+	height: 200px;
+	border-left:1px solid #e4e4e4;
+	text-align: center;
+	display: flex;
+	justify-content : center;
+	padding-top:60%;
+	
+}
+.stitle{
+	text-align: left;
+	font-weight: bold;
+	width: 550px;
+	float: left;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	padding-right:20px;
+}
+.sprice {
+	text-align: left;
+	padding-left:20px;
+	color:#189BFF;
+	font-weight: bold;
+	font-size: 13px;
+}
+.pageNum{
+	grid-column:1/2;
+	grid-row:3/4;
+	text-align: center;
+	font-size: 0.8em;
+	padding:20px 0;
+	position: relative;
+	bottom:20px;
+	word-spacing: 0.1em;
+}
+.pageNum > a:hover, a:active{
+	font-weight: bold;
+	color:#f60; 
+	}

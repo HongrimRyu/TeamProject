@@ -1,0 +1,538 @@
+@CHARSET "UTF-8";
+
+.cloud{
+	z-index: 1;
+	position: fixed;
+	width:90%; 
+	padding-top:5%;
+	padding-left:200px;
+}
+.main_img{
+	border:1px solid #000;
+	box-shadow: 10px 10px 20px rgba(60,60,60,0.2);
+	margin:30px;
+	width: 600px;
+}
+.fl{
+	float:left;
+	margin-left:15%;
+}
+.fr{
+	float: right;
+	margin-right: 15%;
+}
+#main{
+	background-color:#0DE9FF;
+	max-width: 100%;
+	min-width:1200px;
+	min-height:1000px;
+	height: 100vh;
+}
+#main article{
+	max-width: 100%;
+	min-width:1200px;
+	min-height:800px;
+	text-align: center;
+	padding-top:12%;
+	position: relative;
+	z-index: 100;
+	color:#fff;
+	font-size: 0.8em;
+	border:0;	
+}
+#main2{
+	background-color:#00BCFF;
+	max-width: 100%;
+	min-width:1200px;
+	min-height:1000px;
+	height: 100vh;
+}
+#main2 article{
+	max-width: 100%;
+	min-width:1200px;
+	min-height:800px;
+	text-align: center;
+	padding-top:8%;
+	border:0;	
+}
+#main3{
+	background-color:#18AFFF;
+	max-width: 100%;
+	min-width:1200px;
+	min-height:1000px;
+	height: 100vh;
+}
+#main3 article{
+	max-width: 100%;
+	min-width:1200px;
+	min-height:800px;
+	text-align: center;
+	padding-top:12%;
+	border:0;	
+}
+#main4{
+	background-color:#189BFF;
+	max-width: 100%;
+	min-width:1200px;
+	min-height:800px;
+	height: 100vh;
+}
+#main4 article{
+	max-width: 100%;
+	min-width:1200px;
+	min-height:800px;
+	text-align: center;
+	padding-top:17%;
+	color:#fff;
+	font-size: 1.1em;
+	z-index:100;
+	border:0;
+}
+#login article{
+	max-width: 100%;
+	min-width:1200px;
+	min-height:800px;
+	padding-top: 200px;
+	padding-bottom:50px;
+	position:relative;
+	z-index: 9999;
+	font-size:14px;
+	padding-bottom:150px;
+	display:flex;
+	border:0;
+}
+#login {
+	max-width: 100%;
+	min-width:1200px;
+	min-height:1000px;
+	margin: 0 auto;
+	background-color:#189BFF;
+	font-family: 'Nanum Gothic', sans-serif; 
+}
+/* login 비밀번호찾기 팝업 */
+#pfPopup{
+	min-width:520px;
+	min-height:400px;
+	margin:0 auto;
+	padding:40px 20px;
+	left:35%;
+	top:-1500px;
+	background-color: #fff;
+	border:2px solid black;
+	box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+	position:fixed;
+	font-size:inherit;
+	text-align:center;
+	z-index: 99999;
+	transition: All 0.2s ease;
+	-webkit-transition: All 0.2s ease;
+	-moz-transition: All 0.2s ease;
+	-o-transition: All 0.2s ease;
+}
+.pfForm{
+	max-width: 95%;
+	margin: 0 auto;
+	padding:20px 0;
+}
+.pfSbm{
+	width: 300px;
+	padding: 2% 5%;
+	margin: 5px 0;
+	border: 2px solid #1876FF;
+	background-color: #189BFF;
+	color:white;
+	letter-spacing: 0.2em;
+}
+.pfSbm:hover{
+	background-color:black;
+	color:white;
+	border: 2px solid black;
+	box-shadow: 10px 10px 0px rgba(170, 228, 255, 1);
+	-webkit-transition:width 0.5s, height 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+	transition: 0.5s;
+	transform:translate(-5px, -5px);
+}
+.pfForm > label{
+	margin-top:40px;
+}
+.pftxt{
+	font-size:0.8em;
+	text-align:center;
+	margin-top:20px;
+	color:#595959;
+	padding-top:20px;
+	border-top:1px solid #e4e4e4;
+}
+
+
+#pfPopup.open{
+	top: 200px;
+	display: block;	
+}
+.page_cover {
+	width: 100%;
+	height: 1080px;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	background-color: rgba(0,0,0,0.4);
+	z-index: 10;
+	display: none;
+}
+.page_cover.open {
+	position: absolute;
+	display: block;
+}
+
+
+
+/* popup 플로팅 애니메이션 */
+.floating {
+	animation-name: floating;
+	-webkit-animation-name: floating;
+	-moz-animation-name: floating;
+	-o-animation-name: floating;
+	animation-duration: 1.8s;
+	-webkit-animation-duration: 1.8s;
+	-moz-animation-duration: 1.8s;
+	-o-animation-duration: 1.8s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+}
+
+@keyframes floating { 
+	0% {
+	transform: translateY(0%);
+	}
+	50%{
+	transform:translateY(1%);
+	}
+	100%{
+	transform:translateY(0%);
+	}
+}
+@-webkit-keyframes floating { 
+	0% {
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	-o-transform: translateY(0%);
+	}
+	50%{
+	-webkit-transform:translateY(1%);
+	-moz-transform:translateY(1%);
+	-o-transform:translateY(1%);
+	}
+	100%{
+	-webkit-transform:translateY(0%);
+	-moz-transform:translateY(0%);
+	-o-transform:translateY(0%);
+	}
+}
+
+/* popup 플로팅 애니메이션 */
+
+/* select box 설정 */
+select {
+	-webkit-appearance: none; /* 네이티브 외형 감추기 */
+	-moz-appearance: none;
+	appearance: none;
+	background: url("../img/v.png") no-repeat 95% 50%; /* 화살표 모양의 이미지 */
+	width: 30%;
+	padding: .2em .2em; /* 여백으로 높이 설정 */
+	font-family: inherit; /* 폰트 상속 */
+	border: 1px solid black;
+	border-radius: 0px; /* iOS 둥근모서리 제거 */
+}
+
+/* IE 10, 11의 네이티브 화살표 숨기기 */
+select::-ms-expand {
+	display: none;
+}
+
+
+#lgPopup {
+	width: 480px;
+	height: 600px;
+	margin: 0 auto;
+	background-color: rgba(255,255,255,1);
+	border: 2px solid black;
+	border-radius: 0px;
+	padding: 30px 20px;
+	text-align: center;
+	position: relative;
+	color:black;
+	justify-content:center;
+	align-content:middle;
+	z-index: 9;
+	box-shadow: 10px 10px 0px rgba(24, 131, 255, 1);
+}
+
+.txt {
+	letter-spacing: 0.2em;
+	font-size: 3em;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+/* login */
+.lgForm {
+	max-width: 95%;
+	height:450px;
+	margin: 0 auto;
+}
+
+
+.lgInp {
+	width: 300px;
+	padding: 2% 5%;
+	margin: 5px 2px;
+	border: 1px solid #e4e4e4;
+	background-color: #f9f9f9;
+}
+
+.lgSbm {
+	width: 300px;
+	padding: 2% 5%;
+	margin: 5px 0;
+	border: 1px solid #1876FF;
+	background-color: #189BFF;
+	color:white;
+	letter-spacing: 0.2em;
+	cursor: pointer;
+}
+
+.lgSbm:hover {
+	background-color: #189BFF;
+	/* border: 2px solid black; */
+	box-shadow: 10px 10px 0px rgba(170, 228, 255, 1);
+	-webkit-transition:width 0.5s, height 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+	transition: 0.5s;
+	transform:translate(-5px, -5px);
+	
+}
+
+.lgBtn:hover, .lgBtn2:hover {
+	background-color:black;
+	color:white;
+	border: 2px solid black;
+	cursor: pointer;
+	/* box-shadow: 5px 5px 0px rgba(170, 228, 255, 1);
+	-webkit-transition:width 0.5s, height 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+	transition: 0.5s;
+	transform:translate(-2px, -2px); */
+}
+
+.lgGuest:hover {
+	background-color:black;
+	color:white;
+	border: 2px solid black;
+	cursor: pointer;
+	/* box-shadow: 5px 5px 0px rgba(170, 228, 255, 1);
+	-webkit-transition:width 0.5s, height 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+	transition: 0.5s;
+	transform:translate(-2px, -2px); */
+}
+
+.lgBtn {
+	width: 110px;
+	padding: 2% 5%;
+	margin: 5px 2px;
+	margin-bottom: 10px;
+	border: 2px solid #e4e4e4;
+	background-color: #e4e4e4;
+	font-weight: bold;
+}
+
+.lgBtn2 {
+	width: 180px;
+	padding: 2% 3%;
+	margin: 5px 2px;
+	margin-bottom: 10px;
+	border: 2px solid #e4e4e4;
+	background-color: #e4e4e4;
+	font-weight: bold;
+	text-align: center;
+}
+
+.lgGuest {
+	width: 300px;
+	padding: 2% 5%;
+	margin: 5px 0;
+	margin-top: 10px;
+	border: 2px solid #e4e4e4;
+	background-color: #e4e4e4;
+	color: black;
+	font-weight: bold;
+}
+
+.lgForm hr {
+	width: 90%;
+	border: 0.5px solid #e4e4e4;
+	margin-left:5%;
+}
+
+.snsBtn {
+	width: 300px;
+	height:100px;
+	margin-left: 14%;
+	/* display:flex;
+	align-self:around-between;
+	justify-content:space-between; */
+	position: relative;
+	
+}
+
+.snsN, .snsF, snsG  {
+	width:300px !important;
+	height:40px;
+	margin-top: 10px;
+	font-size: 2em;
+	font-weight: 900;
+	text-align:center;
+	margin-top: 10px;
+	border:0px;
+	box-sizing: content-box;
+	/* border:2px solid white; */
+	position:relative;
+	
+}
+
+
+.snsN {
+	background-color: #2fc211;
+	color: white;
+	float:left;
+}
+
+.snsF {
+	background-color: #556fb5;
+	color: white;
+	margin-bottom:10px;
+	font-size: 0.8em;
+}
+.snsG{
+	backgroud-color:#e4e4e4;
+}
+/* login */
+
+/* join */
+#join{
+	max-width: 100%;
+	min-width:1200px;
+	min-height:800px;
+	height:100vh;
+	margin: 0 auto;
+	background-color:#189BFF;
+	font-family: 'Nanum Gothic', sans-serif; 
+	padding-top:80px;
+}
+#jiPopup {
+	max-width: 700px;
+	max-height: 1000px;
+	margin: 0 auto;
+	background-color: #fff;
+	border: 2px solid black;
+	border-radius: 0px;
+	padding: 20px 20px;
+	box-shadow: 10px 10px 0px rgba(24, 131, 255, 1);
+	text-align: center;
+	position: relative;
+	z-index: 90000;
+}
+.xbox{
+	width:30px;
+	float:right;
+	z-index: 99999;
+}
+.jiTxt{
+	margin-top:30x;
+	padding-top:20px;
+	letter-spacing: 0.2em;
+	font-size: 3em;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.jiForm {
+	max-width: 90%;
+	margin: 0 auto;
+	margin-top: 5%;
+	text-align: left;
+	align-self: center;
+	font-weight: bold;
+}
+
+.jiForm > label {
+	max-width: 200px;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+.jiInp {
+	min-width: 70%;
+	padding: 7px 10px;
+	margin: 10px 0;
+	border: 1px solid #e4e4e4;
+	background-color: #f9f9f9;
+}
+
+.jiInp1 {
+	max-width: 30%;
+	padding: 7px 10px;
+	margin: 10px 0;
+	border: 1px solid #e4e4e4;
+	background-color: #f9f9f9;
+}
+
+.jiInp2 {
+	max-width: 20%;
+	padding: 7px 10px;
+	margin: 10px 0;
+	border: 1px solid #e4e4e4;
+	background-color: #f9f9f9;
+}
+
+.btn {
+	max-width: 100px;
+	max-height: 10%;
+	padding: 1% 1%;
+	margin-left: 7px;
+	border: 1px solid #92dcff;
+	font-size: 0.7em;
+	background-color: #aae4ff;
+}
+
+.jiSbm {
+	width: 300px;
+	padding: 10px 10px;
+	margin: 5px 0;
+	margin-top:10%;
+	margin-left: 25%;
+	background-color: #189BFF;
+	border:2px solid #189BFF;
+	letter-spacing: 0.2em;
+	color:white;
+}
+
+.jiSbm:hover {
+	background-color: #189BFF;
+	
+	border: 2px solid black;
+	box-shadow: 10px 10px 0px rgba(170, 228, 255, 1);
+	-webkit-transition:width 0.5s, height 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+	transition: 0.5s;
+	transform:translate(-5px, -5px);
+}
+
+.smallLabel {
+	letter-spacing: 0;
+	padding: 0 0;
+	margin: 0 0;
+	color: #EF5350;
+	font-size : 0.8em;
+}
+
+/* join */

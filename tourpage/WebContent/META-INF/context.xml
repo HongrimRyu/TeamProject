@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+
+  <Resource 
+   name="jdbc/jsptest"
+   auth="Container"
+   type="javax.sql.DataSource"
+   driverClassName="com.mysql.jdbc.Driver"
+   url="jdbc:mysql://54.180.2.191:3306/tourpage"
+   factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+   username="tourpage"
+   password="teamproject"
+  />
+</Context>
